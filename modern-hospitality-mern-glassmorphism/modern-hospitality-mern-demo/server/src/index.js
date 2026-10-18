@@ -18,6 +18,12 @@ app.get("/api/health", (_req, res) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "Modern Hospitality API is running!"
+  });
+});
 app.use("/api/inquiries", inquiriesRouter);
 
 app.use((err, _req, res, _next) => {
